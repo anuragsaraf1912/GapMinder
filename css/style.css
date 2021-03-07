@@ -1,0 +1,31 @@
+#chart-area svg {
+	margin-left: auto;
+    margin-right: auto;
+	display: block; 
+	margin-top: 20px;
+}
+
+#logo {
+	height:50px;
+}
+
+.navbar-brand {
+	height: 60px;
+	padding: 5px 0px;
+}
+
+.d3-tip{
+
+	background-color: black;
+	border-radius: 4%;
+	padding: 5px;
+	color:white;
+	text-transform:capitalize
+}
+
+button{
+	margin-top: 18px;
+}
+#slider-div{
+	margin-top: 20px;}
+

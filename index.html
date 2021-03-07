@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <title>Gapminder Clone</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <!-- Custom styling -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img id="logo" src="img/logo.png"></a>      
+        </div>
+    </nav>
+
+    <!-- Bootstrap grid setup -->
+    <div class="container">
+        <div class="row">
+            <div class = "col-md-2">
+            <button type="button" class="btn btn-danger" id = "play-button">Play</button>
+            <button type="button" class="btn btn-danger" id = "reset-button">Reset</button>
+            </div>
+            <div class="col-md-5">
+                <div id="slider-div">
+                    <label>Year: <span id = "year">1800</span></label>
+                    <div id="slider"></div>
+                </div>
+            </div>
+            
+         
+            <div class = "col-md-5">
+                    <div class="form-group">
+                        <label for="Continents">Select Continent: </label>
+                        <select class="form-control" id="Continents">
+                        <option value="All">All</option>
+                        <option value = "americas">America </option>
+                        <option value = "europe">Europe</option>
+                        <option value = "africa">Africa</option>
+                        <option value = "asia">Asia</option>
+                        </select>
+                    </div>
+             </div>
+            
+        </div>
+        
+        
+        <div class="row">
+
+            <div id="chart-area"></div>  
+        </div>
+        <!-- <div class="row">
+            <svg height = 300 width = 500>
+                <rect x = 0 y = 0 height = 50 width = 70 fill = rgba(0,0,0,0.3)>
+                </rect>
+                <text x = 20 y = 40 font-size = '20px'>testing</text>
+            </svg>
+        </div> -->
+
+    </div>
+
+<!-- External JS libraries -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/d3.min.js"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<!-- Custom JS -->
+<script src="js/main.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <title>Gapminder Clone</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Custom styling -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img id="logo" src="img/logo.png"></a>      
+        </div>
+    </nav>
+
+    <!-- Bootstrap grid setup -->
+    <div class="container">
+        <div class="row">
+            <div id="chart-area"></div>  
+        </div>
+    </div>
+
+<!-- External JS libraries -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/d3.min.js"></script>
+<!-- Custom JS -->
+<script>
+    var svg = d3.select('#chart-area').append('svg')
+            .attr('height', 500)
+            .attr('width', 500)
+
+    console.log(svg)
+
+    var xScale = d3.scaleLog()
+                .domain([1,200000])
+                .range([0, 390])
+                
+    var yScale = d3.scaleLinear()
+                .domain([1,100])
+                .range([390,0])
+
+    yAxis =  d3.axisLeft(yScale)
+                
+    
+    var xAxis = d3.axisBottom(xScale)
+                .tickValues([10, 100, 1000, 10000])
+                .tickFormat(function (d) {
+        return xScale.tickFormat(4,d3.format(",d"))(d)
+})
+
+    group = svg.append('g')
+
+    group.append('g')
+        .attr('transform', 'translate(0, 50)')
+        .call(xAxis)
+
+    group.append('g')
+    .attr('transform', 'translate(30, 10)')
+    .call(yAxis)
+
+</script>
+
+</body>
+</html>
